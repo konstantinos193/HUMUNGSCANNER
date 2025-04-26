@@ -38,10 +38,17 @@ export default function Home() {
       try {
         setIsLoading(true)
         setError(null)
-
+  
         // Use the fetchAllTokens utility function
         const tokensData = await fetchAllTokens()
-        setTokens(tokensData)
+        // Add default values for missing fields
+        const tokensWithDefaults = tokensData.map(token => ({
+          price_1h: 0,
+          btc_liquidity: 0,
+          token_liquidity: 0,
+          ...token,
+        }))
+        setTokens(tokensWithDefaults)
       } catch (error) {
         console.error("Error loading data:", error)
         setError(error instanceof Error ? error.message : "Failed to load data")
@@ -49,7 +56,7 @@ export default function Home() {
         setIsLoading(false)
       }
     }
-
+  
     loadData()
   }, [])
 
