@@ -206,7 +206,7 @@ export default function Home() {
         </section>
 
         {/* Error display */}
-        {error && (
+        {/* {error && (
           <section className="py-4">
             <div className="container mx-auto px-4">
               <div className="bg-red-900/30 border border-red-500/30 rounded-lg p-4 text-red-300 text-sm">
@@ -215,7 +215,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-        )}
+        )} */}
 
         {/* Risk Assessment Section */}
         <section className="py-10 md:py-16 relative">
