@@ -86,7 +86,7 @@ export default function Home() {
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 relative">
                 <img 
-                  src="https://humanz.fun/humanz-logo-animated.gif"
+                  src="http://humanz.fun/humanz-logo-animated.gif"
                   alt="HUMANZ Logo"
                   className="w-full h-full object-cover rounded-md"
                 />
@@ -188,7 +188,7 @@ export default function Home() {
                 <div className="relative bg-purple-900/30 border border-purple-500/30 rounded-lg p-4 md:p-6 backdrop-blur-sm">
                   <div className="w-full h-48 md:h-64 bg-purple-900/50 rounded-md flex items-center justify-center">
                     <img 
-                      src="https://humanz.fun/new-eye-image.png" 
+                      src="http://humanz.fun/new-eye-image.png" 
                       alt="HUMANZ Analysis" 
                       className="w-full h-full object-cover rounded-md"
                     />
@@ -290,7 +290,7 @@ export default function Home() {
                   <div className="flex-1 flex items-center justify-center mt-4 relative">
                     <div className="w-36 h-36 md:w-64 md:h-64 relative bg-purple-900/50 rounded-lg flex items-center justify-center">
                       <img 
-                        src="https://humanz.fun/humanz-logo-animated.gif" 
+                        src="http://humanz.fun/humanz-logo-animated.gif" 
                         alt="HUMANZ Logo" 
                         className="w-full h-full object-cover rounded-lg"
                       />
@@ -372,7 +372,7 @@ export default function Home() {
                 <div className="flex justify-center md:justify-end mt-6 md:mt-0">
                   <div className="w-64 h-40 bg-purple-900/50 rounded-lg flex items-center justify-center">
                     <img 
-                      src="https://humanz.fun/new-eye-image.png" 
+                      src="http://humanz.fun/new-eye-image.png" 
                       alt="HUMANZ Image" 
                       className="w-full h-full object-cover rounded-lg"
                     />
@@ -391,7 +391,7 @@ export default function Home() {
             <div className="flex items-center mb-4 md:mb-0">
               <div className="w-8 h-8 relative">
                 <img 
-                  src="https://humanz.fun/humanz-logo-animated.gif"
+                  src="http://humanz.fun/humanz-logo-animated.gif"
                   alt="HUMANZ Logo"
                   className="w-full h-full object-cover rounded-md"
                 />
