@@ -172,6 +172,11 @@ const formatPercentage = (balance: string, totalSupply: string): string => {
   return `${percentage.toFixed(2)}%`
 }
 
+function forceHttps(url: string): string {
+  if (!url) return url;
+  return url.replace(/^http:\/\//i, 'https://');
+}
+
 // Mock data
 const MOCK_TOKEN: Token = {
   id: "2ait",
@@ -244,7 +249,7 @@ const TokenHeader = ({ token, btcUsdPrice }: { token: Token; btcUsdPrice: number
     <div className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 bg-gradient-to-r from-[#1a1a2e] to-[#16213e] rounded-xl shadow-lg">
       <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-[#0f3460] border-2 border-[#e94560]/30 shadow-glow">
         <Image
-          src={`https://images.odin.fun/token/${token.id}`}
+          src={forceHttps(`https://images.odin.fun/token/${token.id}`)}
           alt={token.name}
           fill
           className="object-cover"
@@ -937,7 +942,7 @@ export default function ResultsPage() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="https://humanz.fun/humanz-logo-animated.gif"
+                  src={forceHttps("https://humanz.fun/humanz-logo-animated.gif")}
                   alt="HUMANZ Logo"
                   width={40}
                   height={40}
@@ -1090,7 +1095,7 @@ export default function ResultsPage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <Image
-                src="https://humanz.fun/humanz-logo-animated.gif"
+                src={forceHttps("https://humanz.fun/humanz-logo-animated.gif")}
                 alt="HUMANZ Logo"
                 width={30}
                 height={30}
