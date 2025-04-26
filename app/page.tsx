@@ -46,6 +46,8 @@ export default function Home() {
           price_1h: 0,
           btc_liquidity: 0,
           token_liquidity: 0,
+          marketcap: token.marketcap ?? 0,
+          volume: token.volume ?? 0,
           ...token,
         }))
         setTokens(tokensWithDefaults)
