@@ -786,7 +786,7 @@ const testFormatUSDValue = () => {
 
 export default function ResultsPage() {
   const searchParams = useSearchParams()
-  const search = searchParams.get("search") || ""
+  const search = searchParams?.get("search") || ""
 
   const [tokenData, setTokenData] = useState<Token | null>(null)
   const [loading, setLoading] = useState(true)
