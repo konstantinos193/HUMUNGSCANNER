@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import { fetchAllTokens } from "@/app/utils/api"
+import { calculateRiskLevel } from "@/app/utils/calculateRiskLevel"
 
 interface TokenData {
   id: string
