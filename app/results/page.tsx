@@ -470,7 +470,7 @@ const TopHoldersTable = ({ holders, tokenData }: { holders: Holder[]; tokenData:
     try {
       setLoading(true);
       const nextPage = currentPage + 1;
-      const response = await fetch(`http://157.180.36.186:3001/api/token/${tokenData.id}/owners?page=${nextPage}&limit=${pageSize}`, {
+      const response = await fetch(`https://api.humanz.fun/api/token/${tokenData.id}/owners?page=${nextPage}&limit=${pageSize}`, {
         headers: {
           'Accept': 'application/json'
         },
@@ -810,7 +810,7 @@ export default function ResultsPage() {
         setLoading(true)
 
         // Fetch token data first
-        const tokenResponse = await fetch(`http://157.180.36.186:3001/api/token/${search}`, {
+        const tokenResponse = await fetch(`https://api.humanz.fun/api/token/${search}`, {
           headers: {
             'Accept': 'application/json'
           },
@@ -837,7 +837,7 @@ export default function ResultsPage() {
         // Fetch additional data in parallel
         const [btcPriceResponse, holdersResponse] = await Promise.all([
           fetch('https://mempool.space/api/v1/prices'),
-          fetch(`http://157.180.36.186:3001/api/token/${search}/owners?page=1&limit=100`, {
+          fetch(`https://api.humanz.fun/api/token/${search}/owners?page=1&limit=100`, {
             headers: {
               'Accept': 'application/json'
             },
